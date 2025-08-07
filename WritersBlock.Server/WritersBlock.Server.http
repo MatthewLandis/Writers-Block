@@ -1,0 +1,6 @@
+@WritersBlock.Server_HostAddress = http://localhost:5120
+
+GET {{WritersBlock.Server_HostAddress}}/api/Story/GetStories
+Accept: application/json
+
+###
