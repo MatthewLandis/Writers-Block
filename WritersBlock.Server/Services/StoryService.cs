@@ -51,7 +51,7 @@ namespace WritersBlock.Server.Services
             {
                 using Microsoft.Data.SqlClient.SqlConnection con = _sql.WritersBlock;
                 var story = await con.QueryFirstOrDefaultAsync<Story>(
-                    "SELECT * FROM stories WHERE title = @title",
+                    "SELECT * FROM stories WHERE title LIKE '%' + @title + '%';",
                     new { title }
                 );
 
