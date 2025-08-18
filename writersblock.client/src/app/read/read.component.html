@@ -1,0 +1,23 @@
+<section class="read">
+  <div class="read-content">
+    <h1>Browse any <span>Story</span></h1>
+    <hr/>
+    <div class="search">
+      <div class="searchbar">
+        <input [(ngModel)]="searchTitle" placeholder="Enter story title" />
+        <button (click)="SearchStory(searchTitle)" class="searchBtn">Search</button>
+      </div>
+      <button class="btn" (click)="rando()">Random Story</button>
+    </div>
+    <section class="displayedStories">
+      <h2>Stories!</h2>
+      <div>
+        <br />
+        <hr />
+        <p><strong>Title:</strong> {{ story.title }}</p>
+        <p><strong>Author:</strong> {{ story.author }}</p>
+        <p><strong>Text:</strong> {{ story.text }}</p>
+      </div>
+    </section>
+  </div>
+</section>

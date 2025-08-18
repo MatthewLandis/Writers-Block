@@ -1,17 +1,30 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReadComponent } from './read/read.component';
+import { WriteComponent } from './write/write.component';
+import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ReadComponent,
+    WriteComponent,
+    HomeComponent,
+    HeaderComponent,
+    TipsComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,
-    AppRoutingModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

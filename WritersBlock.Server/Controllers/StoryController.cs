@@ -10,12 +10,37 @@ namespace WritersBlock.Server.Controllers
     {
         private readonly IStoryService _storyService = storyService;
 
-        [HttpGet("GetStories")]
-        public async Task<IActionResult> GetStories()
+        [HttpGet("GetStory")]
+        public async Task<IActionResult> GetStory()
         {
-            List<Story> stories = await _storyService.GetStories();
+            Story? story = await _storyService.GetStory();
 
-            return stories.Count > 0 ? Ok(stories) : BadRequest();
+            return story != null ? Ok(story) : BadRequest();
+        }
+
+        [HttpPost("AddStory")]
+        public async Task<IActionResult> AddStory(Story storyToAdd)
+        {
+            bool success = await _storyService.AddStory(storyToAdd);
+
+            return success ? Ok(true) : BadRequest();
+        }
+
+        [HttpGet("SearchStory")]
+        public async Task<IActionResult> SearchStory([FromQuery] string title)
+        {
+            var story = await _storyService.SearchStory(title);
+            if (story == null)
+                return NotFound();
+            return Ok(story);
+        }
+
+        [HttpGet("Rando")]
+        public async Task<IActionResult> Rando()
+        {
+            Story? story = await _storyService.Rando();
+
+            return story != null ? Ok(story) : BadRequest();
         }
     }
 }

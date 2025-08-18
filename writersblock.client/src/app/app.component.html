@@ -1,15 +1,2 @@
-<div class="title">Welcome to Writer's Block</div>
-<div>From Boht</div>
-<br />
-<div>
-  <div><strong>List of stories:</strong></div>
-  <br />
-  <div *ngFor="let story of stories">
-    <div><strong>Title:</strong> {{ story.title }}</div>
-    <div><strong>Text:</strong> {{ story.text }}</div>
-    <div><strong>Author:</strong> {{ story.author }}</div>
-    <div><strong>Likes:</strong> {{ story.likes }}</div>
-    <br />
-  </div>
-  <div *ngIf="stories.length === 0">There are no stories :(</div>
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>

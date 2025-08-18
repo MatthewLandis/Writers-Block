@@ -1,0 +1,33 @@
+header {
+  position: relative;
+  background-color: var(--tan);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  font-size: 2rem;
+}
+
+  nav a {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    color: var(--text);
+  }
+
+    nav a:hover, nav a.active {
+      cursor: pointer;
+      color: var(--brown);
+      transition: .3s;
+    }
+
+span {
+  border-right: 1px solid var(--text);
+}

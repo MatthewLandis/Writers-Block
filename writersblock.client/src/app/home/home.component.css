@@ -1,0 +1,104 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tan);
+  min-height: calc(100vh - 60px);
+  color: var(--text);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--text);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+   img {
+       width: 30%;
+   }
+span {
+  color: var(--brown);
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}
+
+.displayedStories {
+  background-color: var(--brown);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: .8rem;
+  border: 1px solid var(--text);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 40rem;
+}
+hr {
+  color: var(--text);
+}
+  .displayedStories h2 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .displayedStories p {
+    font-size: 1.2rem;
+  }
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 4rem;
+  background-color: var(--tan);
+  border: 1px solid var(--text);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--text);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+  cursor: pointer;
+}
+
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--brown);
+    z-index: -1;
+    transition: .5s;
+  }
+
+  .btn:hover {
+    color: var(--tan);
+  }
+
+    .btn:hover::before {
+      width: 100%;
+    }

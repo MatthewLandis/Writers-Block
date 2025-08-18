@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AppService } from './app.service';
-import { IStory } from './app.model';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,19 +6,6 @@ import { IStory } from './app.model';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
-  public stories: IStory[] = [];
-
-  constructor(private appService: AppService) {}
-
-  ngOnInit() {
-    this.appService.getStories().subscribe(
-      (result) => {
-        this.stories = result;
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
+export class AppComponent  {
+  
 }
