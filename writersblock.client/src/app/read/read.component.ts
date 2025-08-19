@@ -8,14 +8,8 @@ import { IStory } from '../app.model';
   templateUrl: './read.component.html',
   styleUrl: './read.component.css'
 })
+
 export class ReadComponent implements OnInit {
-
-  public storyToAdd: IStory = {
-    title: '',
-    text: '',
-    author: '',
-  }
-
   public story: IStory = {
     title: '',
     text: '',

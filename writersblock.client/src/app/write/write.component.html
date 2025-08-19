@@ -1,21 +1,23 @@
 <section class="write">
   <div class="write-content">
     <h1>Post a <span>Story</span></h1>
-    <hr />
     <div class="row">
       <div class="labelInputField">
-        <label class="label">Title:</label>
-        <input class="input" type="text" name="title" [(ngModel)]="storyToAdd.title" />
+        <label class="label">Title</label>
+        <input class="input" type="text" name="title" placeholder="Enter title here" [(ngModel)]="storyToAdd.title" />
       </div>
       <div class="labelInputField">
-        <label class="label">Author:</label>
-        <input class="input" type="text" name="author" [(ngModel)]="storyToAdd.author" />
+        <label class="label">Author</label>
+        <input class="input" type="text" name="author" placeholder="Enter author here" [(ngModel)]="storyToAdd.author" />
       </div>
     </div>
     <div class="templates">
-      <label class="label">Your Story:</label>
-      <textarea class="input" type="text" name="text" rows="15" cols="50" [(ngModel)]="storyToAdd.text"></textarea>
+      <label class="label">Your Story</label>
+      <textarea class="input" type="text" name="text" rows="10" cols="60" placeholder="Begin writing..." [(ngModel)]="storyToAdd.text"></textarea>
     </div>
-    <button (click)="addStory()" class="btn">Post</button>
+    <div class="row">
+      <p>Ready to share this Story?</p>
+      <button (click)="addStory()" class="btn">Post</button>
+    </div>
   </div>
 </section>

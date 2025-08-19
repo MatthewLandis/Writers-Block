@@ -9,7 +9,6 @@ import { ReadComponent } from './read/read.component';
 import { WriteComponent } from './write/write.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
-import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import { TipsComponent } from './tips/tips.component';
     WriteComponent,
     HomeComponent,
     HeaderComponent,
-    TipsComponent
   ],
   imports: [
     BrowserModule,

@@ -62,26 +62,27 @@ hr {
   gap: 1rem;
 }
 
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
 .btn {
   position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 15rem;
-  height: 4rem;
-  background-color: var(--tan);
-  border: 1px solid var(--text);
-  border-radius: .8rem;
-  font-size: 1.8rem;
+  padding: .5rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: .1rem;
   color: var(--text);
-  z-index: 1;
+  background-color: var(--brown);
+  border: 1px solid var(--text);
+  border-radius: .5rem;
   overflow: hidden;
+  z-index: 1;
   transition: .5s;
-  cursor: pointer;
 }
-
 
   .btn::before {
     content: '';
@@ -90,13 +91,13 @@ hr {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--brown);
+    background: var(--tan);
     z-index: -1;
     transition: .5s;
   }
 
   .btn:hover {
-    color: var(--tan);
+    color: var(--brown);
   }
 
     .btn:hover::before {
