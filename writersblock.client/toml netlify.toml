@@ -1,0 +1,8 @@
+[build]
+  publish = "writersblock.client/dist/writersblock.client"
+  command = "npm run build --prefix writersblock.client"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
